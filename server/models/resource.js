@@ -23,6 +23,11 @@ const resourceSchema = new mongoose.Schema({
   paid: {
     type: Boolean,
     default: true
+  },
+  mediaType: {
+    type: String,
+    required: true,
+    default: "media"
   }
 });
 

@@ -4,9 +4,10 @@ import cors from 'cors';
 import bodyParser from 'body-parser';
 import dotenv from 'dotenv';
 
+import userRoutes from './routes/users.js';
 import authRoutes from './routes/auth.js';
 import wordRoutes from './routes/words.js';
-
+import resourceRoutes from './routes/resources.js';
 dotenv.config();
 const app = express();
 
@@ -15,8 +16,10 @@ app.use(cors());
 app.use(bodyParser.json({ limit: '30mb', extended :true }))
 app.use(bodyParser.urlencoded({ limit: '30mb', extended :true }))
 
+app.use('/users', userRoutes);
 app.use('/auth', authRoutes);
 app.use('/words', wordRoutes);
+app.use('/resources', resourceRoutes);
 
 
 const CONNECTION_URL = process.env.MONGO_URI;

@@ -2,7 +2,6 @@ import Word from '../models/word.js';
 
 export const createWord = async (req, res) => {
   const wordParams = req.body;
-  console.log(wordParams)
    try {
     const newWord = new Word(wordParams);
     await newWord.save();
