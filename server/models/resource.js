@@ -28,7 +28,17 @@ const resourceSchema = new mongoose.Schema({
     type: String,
     required: true,
     default: "media"
+  },
+  image: {
+    type: String,
+    required: true
+  },
+  mediumType: {
+    type: String,
+    required: true,
+    default: 'article'
   }
+
 });
 
 const resource = mongoose.model('Resource', resourceSchema);

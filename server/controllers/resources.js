@@ -2,10 +2,13 @@ import Resource from '../models/resource.js';
 
 export const createResource = async (req, res) => {
   const resourceParams = req.body;
-  console.log(resourceParams)
+  let paid = resourceParams.paid !== "paid" ? true : false;
+
    try {
     const newResource = new Resource(resourceParams);
+    newResource.paid = paid;
     await newResource.save();
+    console.log(newResource);
     return res.status(200).json(newResource)
    } catch (error) {
      console.log(error);
