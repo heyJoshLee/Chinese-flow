@@ -16,6 +16,7 @@ export const createWord = async (req, res) => {
 }
 
 export const updateWord = async (req, res) => {
+  console.log("UPDATE WORD")
   const id = req.params.id;
   const wordParams = req.body;
   try {
