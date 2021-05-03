@@ -1,6 +1,7 @@
 import Word from '../models/word.js';
 
 export const createWord = async (req, res) => {
+  console.log(req.body)
   const wordParams = req.body;
    try {
     const newWord = new Word(wordParams);
@@ -28,13 +29,6 @@ export const updateWord = async (req, res) => {
 
 export const getWords = async (req, res) => {
   try {
-    // const currentUser = await User.findById(req.user.id)
-
-    // let Words = [];
-    // for(let i = 0; i < currentUser.WordIds.length; i++) {
-    //   let Word = await Word.findById(currentUser.WordIds[i]);
-    //   Words.push(Word);
-    //  }
     const words = await Word.find();
     res.status(200).json(words);
   } catch (error) {
@@ -49,7 +43,8 @@ export const getWord = async (req, res) => {
   const id = req.params.id;
   try {
     const word = await Word.findById(id)
-    res.status(200).json(Word);
+    console.log(word)
+    res.status(200).json(word);
   } catch (error) {
     console.log(error)
     res.status(500).json({ message: "Word was not created."});
