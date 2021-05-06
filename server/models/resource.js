@@ -18,7 +18,7 @@ const resourceSchema = new mongoose.Schema({
     required: true 
   },
   words: {
-    type: [String]
+    type: [Object]
   },
   paid: {
     type: Boolean,

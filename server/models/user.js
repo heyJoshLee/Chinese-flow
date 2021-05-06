@@ -14,7 +14,8 @@ const userSchema = new mongoose.Schema({
   },
   currentList: {
     type: String ,
-    required: true
+    required: true,
+    default: "hsk1"
   },
   characterTyep: {
     type: String,

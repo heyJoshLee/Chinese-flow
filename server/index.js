@@ -8,6 +8,8 @@ import userRoutes from './routes/users.js';
 import authRoutes from './routes/auth.js';
 import wordRoutes from './routes/words.js';
 import resourceRoutes from './routes/resources.js';
+import adminRoutes from './routes/admin.js';
+
 dotenv.config();
 const app = express();
 
@@ -20,6 +22,7 @@ app.use('/users', userRoutes);
 app.use('/auth', authRoutes);
 app.use('/words', wordRoutes);
 app.use('/resources', resourceRoutes);
+app.use('/admin', adminRoutes);
 
 
 const CONNECTION_URL = process.env.MONGO_URI;

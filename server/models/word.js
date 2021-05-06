@@ -18,16 +18,13 @@ const wordSchema = new mongoose.Schema({
     required: true,  
   },
   simplifiedSentence: {
-    type: String,
-    required: true,  
+    type: String  
   },
   traditionalSentence: {
-    type: String,
-    required: true,  
+    type: String  
   },
   englishSentence: {
-    type: String,
-    required: true,  
+    type: String  
   },
   image: {
     type: String
