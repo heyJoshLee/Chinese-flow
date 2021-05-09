@@ -85,8 +85,6 @@ export const getUniqueWords = async (req, res) => {
 
       while (endOfWord > index) {
         let wordToCheck = textToParase.substring(index, endOfWord);
-        console.log("wordToCheck")
-        console.log(wordToCheck)
         const searchResult = await Word.where({simplified: wordToCheck});
         if (searchResult.length > 0) {
           let containsWord = words.some(word => {

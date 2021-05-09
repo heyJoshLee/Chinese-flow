@@ -2,38 +2,39 @@
 
 Todo
 
-- USER
+adding card
 
-* update
+- make sure can't add card twice
+- fix redux update state
 
-- userWords model
+* USER
 
-* show words learned
-* show time stamp
-* show last review
-* look at article for algo
+- update
 
-* hover over words to see their meanings
+* redirect after creating resource
 
-- configure git ignore
+* configure git ignore
 
-- admin
+* admin
 
-* front end
-* backend
+- front end
+- backend
 
-* billing with stripe
+- welcome email
 
-* welcome email
+- Signup page
 
-* Signup page
+- routes to block off app so not signed up can't view
 
-* routes to block off app so not signed up can't view
+- SRS algo
 
-* SRS algo
+- progress on current list
+- mark article as complete and show as completed
 
-* progress
+- home page
 
-- show recent articles completed
-- show recent characters learned
-- show graph
+* show recent articles completed
+* show recent characters learned
+* show graph of recent words learned
+
+- show streak

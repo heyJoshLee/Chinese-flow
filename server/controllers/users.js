@@ -1,6 +1,8 @@
 import User from '../models/user.js';
 import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
+import Word from '../models/word.js';
+import Card from '../models/card.js';
 
 export const createUser = async (req, res) => {
   const userParams = req.body;

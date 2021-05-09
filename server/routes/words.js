@@ -4,7 +4,7 @@ import auth from '../middleware/auth.js';
 
 const router = express.Router({ mergeParams: true});
 
-router.get('/', getWords);
+router.get('/getallwords', getWords);
 router.post('/getUniqueWords', getUniqueWords)
 router.get('/:id', getWord);
 router.get('/getWordBySimplified/:character', getWordBySimplified)
