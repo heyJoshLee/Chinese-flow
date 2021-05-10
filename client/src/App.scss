@@ -1,0 +1,54 @@
+html {
+  font-size: 120%;
+}
+
+.resource {
+  margin-top: 1rem;
+  .resource__description {
+    font-size: 1.2rem;
+  }
+
+  .resource__main-image {
+    display: block;
+    margin: 1rem auto;
+  }
+}
+
+.words-container__heading {
+  text-align: center;
+  font-size: 1.4rem;
+}
+
+.word-button {
+  display: inline-block;
+}
+
+.recent-words-list {
+  text-align: center;
+  .recent-words-list__item {
+    display: inline-block;
+    margin: 0.2rem;
+    font-size: 1.5rem;
+  }
+}
+
+.hover:hover {
+  cursor: pointer;
+}
+
+.add-word-search-form {
+}
+
+.fixed-bottm {
+  position: fixed;
+  bottom: 10%;
+}
+
+.text-med {
+  font-size: 1.4rem !important;
+}
+
+.card-img-top {
+  width: 100px;
+  height: 300px;
+}

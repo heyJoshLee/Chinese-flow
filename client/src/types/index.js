@@ -1,0 +1,37 @@
+// user and auth
+export const LOG_IN = "LOG_IN";
+export const LOG_OUT = "LOG_OUT";
+export const CREATE_USER = "CREATE_USER";
+export const FETCH_USER = "FETCH_USER";
+export const UPDATE_USER = "UPDATE_USER";
+export const GET_WORDS_FOR_LOGGED_IN_USER = "GET_WORDS_FOR_LOGGED_IN_USER";
+
+// RESOURCES
+export const GET_RESOURCE = "GET_RESOURCE";
+export const CREATE_RESOURCE = "CREATE_RESOURCE";
+export const DELETE_RESOURCE = "DELETE_RESOURCE";
+export const UPDATE_RESOURCE = "UPDATE_RESOURCE";
+export const GET_RESOURCES = "GET_RESOURCES";
+export const ADD_WORD_TO_RESOURCE = "ADD_WORD_TO_RESOURCE";
+export const REMOVE_WORD_FROM_RESOURCE = "REMOVE_WORD_FROM_RESOURCE";
+
+// WORDS
+export const GET_WORD = "GET_WORD";
+export const CREATE_WORD = "CREATE_WORD";
+export const DELETE_WORD = "DELETE_WORD";
+export const UPDATE_WORD = "UPDATE_WORD";
+export const GET_WORDS = "GET_WORDS";
+export const SEARCH_WORD = "SEARCH_WORD";
+
+
+// FLASH MESSAGES
+export const CLEAR_MESSAGES = "CLEAR_MESSAGES";
+export const ADD_FLASH_MESSAGE = "ADD_FLASH_MESSAGE";
+
+// STUDY PHASES
+export const ADVANCE_PHASE = "ADVANCE_PHASE";
+export const START_OVER = "START_OVER";
+
+// CARDS
+
+export const ADD_CARD = "ADD_CARD";
