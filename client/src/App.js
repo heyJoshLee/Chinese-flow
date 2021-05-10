@@ -8,7 +8,7 @@ import Resources from './components/resources/Resources';
 import Word from './components/words/Word'; 
 import WordNew from './components/words/New'; 
 import Home from './pages/Home';
-import Account from './pages/Account';
+import Edit from './components/users/Edit';
 import NewResource from './components/resources/New';
 import EditResource from './components/resources/Edit';
 import EditWord from './components/words/Edit';
@@ -39,7 +39,7 @@ function App() {
           <Route exact path="/resources/:id/edit/words" component={EditWords} />
           <Route exact path="/resources/:id/edit" component={EditResource} />
           <Route exact path="/resources/" component={Resources} />
-          <Route exact path="/account/" component={Account} />
+          <Route exact path="/account/" component={Edit} />
           <Route exact path="/signin/" component={SignIn} />
           <Route exact path="/signup/" component={NewUser} />
           <Route exact path="/study/" component={Study} />

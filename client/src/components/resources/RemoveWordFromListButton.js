@@ -1,6 +1,15 @@
 import React from 'react';
+import { removeCardFromUser } from '../../actions/cards';
+import { useDispatch } from 'react-redux';
+import jQuery from 'jquery';
 
 const RemoveWordFromListButton = ({ fullWord }) => {
+  const dispatch = useDispatch();
+
+  const handleClick = () => {
+    dispatch(removeCardFromUser(fullWord._id));
+    jQuery(`#${fullWord._id}-close-button`).click();
+  }
   return (
     <>
     <button type="button" className="btn btn-success badge badge-pill mr-2 ml-2" data-toggle="modal" data-target={`#${fullWord.simplified}`}>
@@ -22,10 +31,10 @@ const RemoveWordFromListButton = ({ fullWord }) => {
           </div>
             <div className="row">
               <div className="col-6">
-                <button type="button" class="btn btn-block btn-lg btn-secondary" data-dismiss="modal">Close</button>
+                <button id={`${fullWord._id}-close-button`} type="button" className="btn btn-block btn-lg btn-secondary" data-dismiss="modal">Close</button>
               </div>
               <div className="col-6">
-                <button type="button" class="btn btn-block btn-lg btn-primary">Remove word</button>
+                <button onClick={handleClick} type="button" class="btn btn-block btn-lg btn-primary">Remove word</button>
               </div>
             </div>
         </div>

@@ -71,8 +71,6 @@ export const deleteWord = async (req, res) => {
   }
 }
 
-
-
 // takes in text and returns all the words in the database that are found
 export const getUniqueWords = async (req, res) => {
   try {

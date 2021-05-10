@@ -1,6 +1,8 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import { addCardToUser } from '../../actions/cards';
+import jQuery from 'jquery';
+
 
 const AddWordToListButton = ({ fullWord }) => {
   const dispatch = useDispatch();
@@ -8,6 +10,7 @@ const AddWordToListButton = ({ fullWord }) => {
   const handleClick = () => {
     console.log(fullWord._id);
     dispatch(addCardToUser(fullWord._id));
+    jQuery(`#${fullWord._id}-close-button`).click();
   }
   return (
     <>
@@ -30,7 +33,7 @@ const AddWordToListButton = ({ fullWord }) => {
           </div>
             <div className="row">
               <div className="col-6">
-                <button type="button" class="btn btn-block btn-lg btn-secondary" data-dismiss="modal">Close</button>
+                <button id={`${fullWord._id}-close-button`} type="button" class="btn btn-block btn-lg btn-secondary" data-dismiss="modal">Close</button>
               </div>
               <div className="col-6">
                 <button onClick={handleClick} type="button" class="btn btn-block btn-lg btn-primary">Add word</button>

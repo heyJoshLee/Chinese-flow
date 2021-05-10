@@ -2,9 +2,11 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import FileBase from 'react-file-base64';
 import { createResource } from '../../actions/resources';
+import { useHistory } from 'react-router-dom';
 
 const Form = () => {
   const dispatch = useDispatch();
+  const history = useHistory();
   const [formData, setFormData] = useState({
     title: "",
     link: "",
@@ -20,6 +22,7 @@ const Form = () => {
     e.preventDefault();
     console.log(formData);
     dispatch(createResource(formData));
+  history.push('/resources');
   }
 
 

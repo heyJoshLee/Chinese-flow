@@ -6,25 +6,17 @@ import { getWordsForLoggedInUser } from '../actions/users';
 
 const Home = () => {
   const dispatch = useDispatch();
+  const auth = useSelector(state => state.auth)
   const knownWords = useSelector(state => state.knownWords)
 
-
-  useEffect(() => {
+  useEffect(async () => {
     dispatch(getWordsForLoggedInUser());
   }, []);
 
-
   return (
     <div className="home-page mt-4">
-      <p className="text-center">You know {knownWords.length} characters.</p>
-      <div className="progress">
-        <div className="progress-bar" role="progressbar" style={{width: `${10/3000}`}} aria-valuenow={25} aria-valuemin={0} aria-valuemax={100}>10</div>
-      </div>
+      <p className="text-center">You know {knownWords.length} words.</p>
       <RecentWords />
-
-      <div>
-        <Recent />
-      </div>
     </div>
   )
 }

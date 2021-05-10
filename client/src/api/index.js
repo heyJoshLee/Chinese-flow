@@ -21,7 +21,7 @@ const CARDS_URL = `${BASEURL}/cards`;
 
 export const logIn = (logInParams) => axios.post(LOGIN_URL, logInParams);
 
-export const updateUser = (userId, userParams, config = configFromLocalStorage) => axios.patch(`${USERS_URL}/${userId}`, userParams, config)
+export const updateLoggedInUser = (userParams, config = configFromLocalStorage) => axios.patch(`${USERS_URL}/`, userParams, config);
 
 export const createUser = (userParams) => axios.post(USERS_URL, userParams);
 
@@ -154,6 +154,14 @@ export const removeWordFromResource = (resourceId, wordId, userToken = token) =>
 
 export const addCardToUser = (wordId, userToken = token) => {
   return axios.post(`${CARDS_URL}/add`, {wordId}, {
+    headers: { 
+      "x-auth-token": userToken
+    }
+  });
+}
+
+export const removeCardFromUser = (wordId, userToken = token) => {
+  return axios.delete(`${CARDS_URL}/${wordId}/remove`, {
     headers: { 
       "x-auth-token": userToken
     }

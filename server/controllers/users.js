@@ -74,9 +74,20 @@ export const getUser = async (req, res) => {
 }
 export const updateUser = async (req, res) => {
   const id = req.params.id;
-  const user_params = req.body;
+  const userParams = req.body;
   try {
-    const user = await User.findByIdAndUpdate(id, user_params, { new: true})
+    const user = await User.findByIdAndUpdate(id, userParams, { new: true})
+    res.status(200).json(user);
+  } catch (error) {
+    console.log(error)
+  }
+}
+
+export const updateLoggedInUser = async (req, res) => {
+  const id = req.user.id;
+  const userParams = req.body;
+  try {
+    const user = await User.findByIdAndUpdate(id, userParams, { new: true})
     res.status(200).json(user);
   } catch (error) {
     console.log(error)

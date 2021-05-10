@@ -9,3 +9,8 @@ export const addCardToUser = (wordId) => async (dispatch) => {
     payload: data
   });
 }
+
+export const removeCardFromUser = (wordId) => async (dispatch) => {
+  const { data } = api.removeCardFromUser(wordId);
+  console.log(data);
+}
