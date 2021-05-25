@@ -10,7 +10,7 @@ if (token) {
   }
 } 
 
-const BASEURL = 'http://localhost:5000';
+const BASEURL = 'https://chinese-flo.herokuapp.com/';
 const RESOURCES_URL = `${BASEURL}/resources`;
 const WORDS_URL = `${BASEURL}/words`;
 const LOGIN_URL = `${BASEURL}/auth/login`;
